@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./no-copy.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/broadsheet-33e1abc0-c76e-4efe-9cc0-1407cbd4a61e/styles.css">
+  <script src="_ds/broadsheet-33e1abc0-c76e-4efe-9cc0-1407cbd4a61e/_ds_bundle.js"></script>
+  <title>Bluesteams Technology Limited</title>
+  <style>
+    a { color: var(--color-accent-700); text-decoration: none; }
+    a:hover { color: var(--color-accent); text-decoration: underline; }
+    body { margin: 0; text-wrap: pretty; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); }
+    .nav { padding-inline: max(clamp(20px, 5vw, 72px), calc((100% - 1200px) / 2 + clamp(20px, 5vw, 72px))); }
+    .nav a[aria-current='page'] { color: var(--color-accent-700); }
+    @media (max-width: 680px) { .nav a:not(.btn) { display: none; } }
+    .kicker { display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0 0 14px; }
+    .hero { padding: 112px 0 84px; }
+    .display { font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+      font-size: clamp(42px, 6vw, 80px); line-height: clamp(45.5px, 6.5vw, 86.5px);
+      letter-spacing: -0.02em; margin: 0 0 0 -0.035em; }
+    .display .line { display: block; }
+    .hero .sub { font-size: 18px; line-height: 28px; max-width: 62ch; margin: 30px 0 0;
+      color: color-mix(in srgb, var(--color-text) 82%, transparent); }
+    .hero .row { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 28px; align-items: center; }
+    .frontpage { padding: 56px 0 70px; }
+    .rule-head { height: 5px; border: 0; margin: 0; border-top: 2px solid var(--color-text); border-bottom: 1px solid var(--color-text); }
+    .rule-cut { height: 0; border: 0; border-top: 1px solid var(--color-text); margin: 0; }
+    .dateline { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px 28px; margin: 0; padding: 14px 0;
+      font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: color-mix(in srgb, var(--color-text) 70%, transparent); }
+    .index { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 70px; padding: 14px 0 28px; }
+    .ix { display: flex; align-items: baseline; gap: 8px; margin: 0; font-size: 15.5px; line-height: 28px; }
+    .ix-leader { flex: 1; min-width: 28px; align-self: flex-end; margin-bottom: 0.34em; border-bottom: 1px dotted color-mix(in srgb, var(--color-text) 45%, transparent); }
+    .ix-num { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; }
+    .ix-num.spot { color: var(--color-accent-700); }
+    @media (max-width: 720px) { .index { grid-template-columns: 1fr; } }
+    .section { padding: 70px 0; }
+    .section-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+      font-size: 32px; line-height: 42px; letter-spacing: -0.015em; margin: 0 0 24px; max-width: 30ch; }
+    .lede { font-size: 17px; line-height: 28px; max-width: 68ch; color: color-mix(in srgb, var(--color-text) 82%, transparent); }
+    .dir-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 64px; margin-top: 32px; }
+    @media (max-width: 720px) { .dir-groups { grid-template-columns: 1fr; } }
+    .dir-entry { display: flex; align-items: baseline; gap: 8px; margin: 0; font-size: 19px; line-height: 26px;
+      font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+    .dir-leader { flex: 1; min-width: 20px; align-self: flex-end; margin-bottom: 0.34em;
+      border-bottom: 1px dotted color-mix(in srgb, var(--color-text) 45%, transparent); }
+    .dir-num { font-size: 15px; color: color-mix(in srgb, var(--color-text) 55%, transparent); font-weight: 400; }
+    .dir-desc { font-size: 14px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 68%, transparent);
+      margin: 4px 0 26px; max-width: 46ch; }
+    .home-feature { background: var(--color-accent-100); width: 100vw; position: relative; left: 50%; margin-left: -50vw; padding: 4px 0; }
+    .home-feature .wrap { padding-top: 56px; padding-bottom: 56px; }
+    .home-feature-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px 64px; align-items: center; }
+    @media (max-width: 780px) { .home-feature-inner { grid-template-columns: 1fr; } }
+    .home-feature h2 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 28px; line-height: 36px; margin: 0 0 14px; max-width: 20ch; }
+    .home-feature p { font-size: 16px; line-height: 26px; color: color-mix(in srgb, var(--color-text) 80%, transparent); margin: 0; max-width: 56ch; }
+    .close { padding: 70px 0 56px; }
+    .close h3 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 30px; line-height: 38px; margin: 0; max-width: 22ch; }
+    .close-split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px 64px; align-items: end; padding-top: 26px; }
+    @media (max-width: 720px) { .close-split { grid-template-columns: 1fr; align-items: start; } }
+    .close-facts p { margin: 0 0 8px; font-size: 16px; line-height: 24px; }
+    .site-footer { padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-logo { width: 40px; height: 40px; overflow: hidden; border-radius: 4px; flex-shrink: 0; display: inline-flex; }
+    .footer-logo img { width: 96px; height: 96px; max-width: none; transform: translate(-23px, -15px); }
+    .footer-wordmark { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 19px; line-height: 24px; }
+    .footer-tagline { font-size: 14px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 32ch; margin: 0; }
+    .footer-col h4 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 65%, transparent); margin: 0 0 14px; font-weight: 400; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 15px; }
+    .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 28px 0 48px; font-size: 13px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 65%, transparent); }
+    .nav-logo { width: 34px; height: 34px; overflow: hidden; border-radius: 4px; display: inline-flex; flex-shrink: 0; }
+    .nav-logo img { width: 82px; height: 82px; max-width: none; transform: translate(-20px, -13px); }
+    .nav-brand { display: inline-flex; align-items: center; gap: 10px; }
+  </style>
+</helmet>
+
+<div style="--color-accent: #2f6cf0; --color-accent-100: color-mix(in srgb, #2f6cf0 12%, white); --color-accent-200: color-mix(in srgb, #2f6cf0 25%, white); --color-accent-300: color-mix(in srgb, #2f6cf0 42%, white); --color-accent-400: color-mix(in srgb, #2f6cf0 65%, white); --color-accent-500: color-mix(in srgb, #2f6cf0 88%, white); --color-accent-600: color-mix(in srgb, #2f6cf0 88%, black); --color-accent-700: color-mix(in srgb, #2f6cf0 70%, black); --color-accent-800: color-mix(in srgb, #2f6cf0 55%, black); --color-accent-900: color-mix(in srgb, #2f6cf0 35%, black); --color-accent-2: #10224f; --color-accent-2-100: color-mix(in srgb, #10224f 10%, white); --color-accent-2-200: color-mix(in srgb, #10224f 22%, white); --color-accent-2-300: color-mix(in srgb, #10224f 38%, white); --color-accent-2-400: color-mix(in srgb, #10224f 60%, white); --color-accent-2-500: color-mix(in srgb, #10224f 82%, white); --color-accent-2-600: color-mix(in srgb, #10224f 88%, black); --color-accent-2-700: color-mix(in srgb, #10224f 100%, black); --color-accent-2-800: color-mix(in srgb, #10224f 85%, black); --color-accent-2-900: color-mix(in srgb, #10224f 65%, black); background: var(--color-bg);">
+
+<nav class="nav">
+  <span class="nav-brand"><span class="nav-logo"><img src="assets/bluesteams-logo.png" alt="Bluesteams Technology logo mark"></span>Bluesteams Technology</span>
+  <a href="Home.dc.html" aria-current="page">Home</a>
+  <a href="About.dc.html">About</a>
+  <a href="Services.dc.html">Services</a>
+  <a href="Industries.dc.html">Industries</a>
+  <a href="Contact.dc.html" class="btn btn-primary">Get in Touch</a>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1 class="display">
+      <span class="line">Building Africa's</span>
+      <span class="line">intelligent technology future.</span>
+    </h1>
+    <p class="sub">Bluesteams Technology Limited creates advanced software, AI-powered solutions, and automation platforms that help businesses, organizations, and governments operate smarter, improve efficiency, and unlock new opportunities through innovative technology.</p>
+    <div class="row">
+      <a href="Contact.dc.html" class="btn btn-primary">Get in Touch</a>
+      <a href="Services.dc.html" class="btn btn-ghost">Explore our solutions</a>
+    </div>
+  </section>
+
+  <section class="frontpage" aria-label="Bluesteams, at a glance">
+    <hr class="rule-head">
+    <p class="dateline">
+      <span>RC — 7469161</span>
+      <span>Abuja, Nigeria</span>
+      <span>Software. AI. Automation. Innovation.</span>
+    </p>
+    <hr class="rule-cut">
+    <div class="index">
+      <p class="ix"><span>Founded</span><span class="ix-leader"></span><span class="ix-num spot">2024</span></p>
+      <p class="ix"><span>Headquarters</span><span class="ix-leader"></span><span class="ix-num">Abuja</span></p>
+      <p class="ix"><span>Core focus areas</span><span class="ix-leader"></span><span class="ix-num">4</span></p>
+      <p class="ix"><span>Industries served</span><span class="ix-leader"></span><span class="ix-num">12+</span></p>
+    </div>
+    <hr class="rule-cut">
+  </section>
+
+  <section class="section">
+    <span class="kicker">On this issue</span>
+    <h2 class="section-title">An African technology innovation company</h2>
+    <p class="lede">Unlike traditional IT service providers, Bluesteams Technology focuses on creating intelligent technology ecosystems — developing software platforms, AI-powered systems, and automation solutions that enable organizations to work faster, smarter, and more effectively.</p>
+    <div class="dir-groups">
+      <div>
+        <p class="dir-entry"><span>About us</span></p>
+        <p class="dir-desc"><a href="About.dc.html">Our story, mission, vision, and what sets us apart.</a></p>
+        <p class="dir-entry"><span>Services</span></p>
+        <p class="dir-desc"><a href="Services.dc.html">Five practices — software, AI, automation, infrastructure, and training.</a></p>
+      </div>
+      <div>
+        <p class="dir-entry"><span>Industries</span></p>
+        <p class="dir-desc"><a href="Industries.dc.html">Twelve sectors, from government to technology companies.</a></p>
+        <p class="dir-entry"><span>Contact</span></p>
+        <p class="dir-desc"><a href="Contact.dc.html">Start a conversation about your next project.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="home-feature">
+    <div class="wrap">
+      <div class="home-feature-inner">
+        <div>
+          <span class="kicker">Capability building</span>
+          <h2>We build people, not just platforms</h2>
+          <p>Corporate and technology training upskills teams in software, AI, and automation — on-site or virtual, across Nigeria and Africa — so capability stays inside the organization long after a project ends.</p>
+        </div>
+        <div class="row" style="display:flex;gap:15px;flex-wrap:wrap;">
+          <a href="Services.dc.html#practice-05" class="btn btn-primary">See our training programs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="close">
+    <hr class="rule-cut">
+    <div class="close-split">
+      <div>
+        <span class="kicker" style="margin-top:26px;">Get in touch</span>
+        <h3>Partner with us to build what's next</h3>
+        <div class="row" style="display:flex;gap:15px;flex-wrap:wrap;margin-top:24px;">
+          <a href="Contact.dc.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="close-facts">
+        <span class="kicker" style="margin-top:26px;">Or reach us directly</span>
+        <p><a href="mailto:info@bluesteamstechnology.com">info@bluesteamstechnology.com</a></p>
+        <p><a href="tel:+2348077500049">+234 807 750 0049</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="footer-logo"><img src="assets/bluesteams-logo.png" alt="Bluesteams Technology logo mark"></span>
+          <span class="footer-wordmark">Bluesteams Technology</span>
+        </div>
+        <p class="footer-tagline">Building intelligent software, AI, and automation systems for Africa's digital era.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="Home.dc.html">Home</a></li>
+          <li><a href="About.dc.html">About</a></li>
+          <li><a href="Services.dc.html">Services</a></li>
+          <li><a href="Industries.dc.html">Industries</a></li>
+          <li><a href="Contact.dc.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@bluesteamstechnology.com">info@bluesteamstechnology.com</a></li>
+          <li><a href="tel:+2348077500049">+234 807 750 0049</a></li>
+          <li><span>Abuja, Nigeria</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://facebook.com/bluesteamstechnology" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com/bluesteamstechnology" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tiktok.com/@bluesteamstechnology" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://x.com/bluesteamstech" target="_blank" rel="noopener">X</a></li>
+          <li><a href="https://youtube.com/@bluesteamstechnology" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Bluesteams Technology Limited · RC — 7469161</span>
+      <span>Software · AI · Automation · Innovation</span>
+    </div>
+  </footer>
+</div>
+</div>
+
+</x-dc>
+</body>
+</html>
