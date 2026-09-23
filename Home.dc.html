@@ -68,6 +68,22 @@
     .dir-num { font-size: 15px; color: color-mix(in srgb, var(--color-text) 55%, transparent); font-weight: 400; }
     .dir-desc { font-size: 14px; line-height: 21px; color: color-mix(in srgb, var(--color-text) 68%, transparent);
       margin: 4px 0 26px; max-width: 46ch; }
+    /* ── Nav cards ── */
+    .nav-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+    @media (max-width: 680px) { .nav-cards { grid-template-columns: 1fr; } }
+    .nav-card { display: block; padding: 28px 28px 24px; border: 1.5px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+      border-radius: 4px; text-decoration: none !important; color: var(--color-text);
+      transition: border-color .2s, box-shadow .2s, transform .2s; position: relative; }
+    .nav-card:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+    .nav-card-icon { width: 36px; height: 36px; color: var(--color-accent-700); margin-bottom: 16px; }
+    .nav-card-title { font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+      font-size: 20px; line-height: 26px; margin: 0 0 8px; color: var(--color-text); }
+    .nav-card-desc { font-size: 14px; line-height: 22px; margin: 0 0 20px;
+      color: color-mix(in srgb, var(--color-text) 65%, transparent); max-width: 36ch; }
+    .nav-card-link { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-accent-700); display: inline-flex; align-items: center; gap: 5px;
+      transition: gap .2s; }
+    .nav-card:hover .nav-card-link { gap: 9px; }
     .home-feature { background: var(--color-accent-100); width: 100vw; position: relative; left: 50%; margin-left: -50vw; padding: 4px 0; }
     .home-feature .wrap { padding-top: 56px; padding-bottom: 56px; }
     .home-feature-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px 64px; align-items: center; }
@@ -144,19 +160,57 @@
     <span class="kicker">On this issue</span>
     <h2 class="section-title">An African technology innovation company</h2>
     <p class="lede">Unlike traditional IT service providers, Bluesteams Technology focuses on creating intelligent technology ecosystems — developing software platforms, AI-powered systems, and automation solutions that enable organizations to work faster, smarter, and more effectively.</p>
-    <div class="dir-groups">
-      <div>
-        <p class="dir-entry"><span>About us</span></p>
-        <p class="dir-desc"><a href="About.dc.html">Our story, mission, vision, and what sets us apart.</a></p>
-        <p class="dir-entry"><span>Services</span></p>
-        <p class="dir-desc"><a href="Services.dc.html">Five practices — software, AI, automation, infrastructure, and training.</a></p>
-      </div>
-      <div>
-        <p class="dir-entry"><span>Industries</span></p>
-        <p class="dir-desc"><a href="Industries.dc.html">Twelve sectors, from government to technology companies.</a></p>
-        <p class="dir-entry"><span>Contact</span></p>
-        <p class="dir-desc"><a href="Contact.dc.html">Start a conversation about your next project.</a></p>
-      </div>
+
+    <div class="nav-cards">
+
+      <!-- About -->
+      <a class="nav-card" href="About.dc.html">
+        <svg class="nav-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a16,16,0,1,1,16,16A16,16,0,0,1,112,84Z"/>
+        </svg>
+        <p class="nav-card-title">About us</p>
+        <p class="nav-card-desc">Our story, mission, vision, and the six reasons organizations across Africa choose us.</p>
+        <span class="nav-card-link">Learn more
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </span>
+      </a>
+
+      <!-- Services -->
+      <a class="nav-card" href="Services.dc.html">
+        <svg class="nav-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,56H216V96H40ZM40,200V112H216v88Zm48-56a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H96A8,8,0,0,1,88,144Zm0,32a8,8,0,0,1,8-8H152a8,8,0,0,1,0,16H96A8,8,0,0,1,88,176Z"/>
+        </svg>
+        <p class="nav-card-title">Services</p>
+        <p class="nav-card-desc">Five practice areas — software, AI, automation, infrastructure, and corporate training.</p>
+        <span class="nav-card-link">Explore services
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </span>
+      </a>
+
+      <!-- Industries -->
+      <a class="nav-card" href="Industries.dc.html">
+        <svg class="nav-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M232,208H216V104a8,8,0,0,0-8-8H160V56a8,8,0,0,0-8-8H48a8,8,0,0,0-8,8V208H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16ZM160,112h40V208H160Zm-16,96H104V176h40Zm0-48H104V136h40Zm0-48H56V64H144ZM56,160H88v48H56Z"/>
+        </svg>
+        <p class="nav-card-title">Industries</p>
+        <p class="nav-card-desc">Twelve sectors served — from government and finance to healthcare and technology companies.</p>
+        <span class="nav-card-link">View industries
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </span>
+      </a>
+
+      <!-- Contact -->
+      <a class="nav-card" href="Contact.dc.html">
+        <svg class="nav-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/>
+        </svg>
+        <p class="nav-card-title">Contact</p>
+        <p class="nav-card-desc">Start a conversation about your next project, partnership, or digital transformation goal.</p>
+        <span class="nav-card-link">Get in touch
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </span>
+      </a>
+
     </div>
   </section>
 
