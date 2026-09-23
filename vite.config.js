@@ -14,9 +14,13 @@ function copyStaticPlugin() {
     apply: 'build',
     async closeBundle() {
       await Promise.all([
-        copyFile('support.js', 'dist/support.js'),
-        copyFile('no-copy.js', 'dist/no-copy.js'),
-        cp('_ds', 'dist/_ds', { recursive: true }),
+        copyFile('support.js',     'dist/support.js'),
+        copyFile('no-copy.js',     'dist/no-copy.js'),
+        copyFile('whatsapp-btn.js','dist/whatsapp-btn.js'),
+        copyFile('sitemap.xml',    'dist/sitemap.xml'),
+        copyFile('robots.txt',     'dist/robots.txt'),
+        copyFile('404.html',       'dist/404.html'),
+        cp('_ds',     'dist/_ds',     { recursive: true }),
         cp('uploads', 'dist/uploads', { recursive: true }),
       ])
       console.log('✓ Copied support.js, _ds/, and uploads/ to dist/')
